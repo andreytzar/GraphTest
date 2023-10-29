@@ -6,7 +6,15 @@
         xmlns:local="clr-namespace:GraphTest"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+    <Grid Margin="3">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal"  Margin="4">
+            <Button x:Name="BTNGenerateGraphColumn" Content="Generate Column" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BTNGenerateGraph_Click"/>
+            <Button x:Name="BTNGenerateGraphLinear" Content="Generate Line" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4,0,0,0" Click="BTNGenerateGraphLinear_Click"/>
+        </StackPanel>
+        <Image x:Name="GraphImage" Grid.Row="1"/>
     </Grid>
 </Window>
